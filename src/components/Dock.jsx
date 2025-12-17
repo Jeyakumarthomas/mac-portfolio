@@ -11,9 +11,9 @@ const Dock = () => {
   const toggleApp = (app) => {
     if(!app.canOpen)return;
 
-    const window = windows[app.id]
+    const window = windows[app.id];
 
-    if(window.isOpen){
+    if(!window){
       console.error(`Window not found for app:${app.id}`);
       return;
     }
