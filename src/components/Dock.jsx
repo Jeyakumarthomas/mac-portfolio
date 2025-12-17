@@ -1,13 +1,29 @@
 import { dockApps } from '#constants';
 import { Tooltip } from "react-tooltip";
 import React,{useRef} from 'react'
+import useWindowStore from '#store/window.js';
 
 const Dock = () => {
 
+  const {openWindow,closeWindow,windows} = useWindowStore();
   const dockRef = useRef(null); 
 
   const toggleApp = (app) => {
-    //TODO implement open window logic
+    if(!app.canOpen)return;
+
+    const window = windows[app.id]
+
+    if(window.isOpen){
+      console.error(`Window not found for app:${app.id}`);
+      return;
+    }
+
+    if(window.isOpen){
+      closeWindow(app.id)
+    }else{
+      openWindow(app.id)
+    }
+    console.log(windows);
   }
 
   return (
