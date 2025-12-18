@@ -2,7 +2,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 gsap.registerPlugin(Draggable);
 
-import { Navbar, Welcome, Dock,Home } from "#components";
+import { Navbar, Welcome, Dock, Home } from "#components";
 import {
   Terminal,
   Safari,
@@ -11,6 +11,7 @@ import {
   Text,
   Image,
   Contact,
+  Photos,
 } from "#windows";
 
 const App = () => {
@@ -26,7 +27,8 @@ const App = () => {
       <Text />
       <Image />
       <Contact />
-      <Home/>
+      <Photos />
+      <Home />
     </main>
   );
 };
