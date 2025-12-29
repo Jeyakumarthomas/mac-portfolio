@@ -31,9 +31,10 @@ const Safari = () => {
         </div>
     </div>
     <div className="blog">
-        <h2>My Developer Blog</h2>
+        {/* <h2>My Developer Blog</h2> */}
+        <h2>Soon.....</h2>
         <div className="space-y-8">
-            {blogPosts.map(({id,image,title,date,link})=>(
+            {/* {blogPosts.map(({id,image,title,date,link})=>(
                 <div key={id} className="blog-post">
                     <div className="col-span-2">
                         <img src={image} alt={title} />
@@ -46,7 +47,7 @@ const Safari = () => {
                         </a>
                     </div>
                 </div>
-            ))}
+            ))} */}
         </div>
     </div>
     </>
